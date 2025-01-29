@@ -36,7 +36,6 @@ pub fn decode_word(encoded_word: &str) -> String {
 
     //println!("After first stage: {}", second_pass.iter().collect::<String>());
 
-    // Обратный первый этап (работаем с FORWARD_ALPHABET)
     let result = second_pass
         .iter()
         .enumerate()
