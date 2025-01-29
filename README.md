@@ -21,7 +21,8 @@ Double Rust Shuffle is a two-step positional cipher that performs encryption in 
 - Run `cargo run --bin double-rust-shuffle` to encode or decode text.
 
 You can also delete // from the `println!` statements in the `src/encoder.rs` and `src/decoder.rs` files to see how the cipher works.
-
+![image](https://github.com/user-attachments/assets/d6eb7a10-abe4-4fef-8336-f20bf076e611)
+![image](https://github.com/user-attachments/assets/97a9ebad-c75d-4b26-962a-daab449baba8)
 ## Cipher algorithm description
 
 The Double Rust Shuffle cipher implements a two-step positional encryption process:
