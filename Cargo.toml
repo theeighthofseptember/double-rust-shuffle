@@ -1,0 +1,11 @@
+[package]
+name = "two-step_positional_cipher"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.8.5"
+
+[[bin]]
+name = "alphabet_generator"
+path = "src/alphabet_generator.rs"
