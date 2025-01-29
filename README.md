@@ -18,7 +18,7 @@ Double Rust Shuffle is a two-step positional cipher that performs encryption in 
 - Run `cargo run --bin alphabet_generator` again to generate alphabet for second step of encoding.
 ![image](https://github.com/user-attachments/assets/90bd9386-426d-414f-8da2-56401a4878fe)
 - Copy the alphabet to the `const REVERSE_ALPHABET: &str = "USE alphabet_generator.rs one more time";` in the `src/encoder.rs` and `src/decoder.rs` files.
-- Run `cargo run --bin **project_name**` to encode or decode text.
+- Run `cargo run --bin project_name` to encode or decode text (replace **project_name** with your project name).
 
 You can also delete // from the `println!` statements in the `src/encoder.rs` and `src/decoder.rs` files to see how the cipher works.
 
