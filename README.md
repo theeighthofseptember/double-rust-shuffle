@@ -13,12 +13,13 @@ Double Rust Shuffle is a two-step positional cipher that performs encryption in 
 
 ## Usage
 - Run `cargo run --bin alphabet_generator` to generate alphabet for first step of encoding.
-[Screenshot]
+![image](https://github.com/user-attachments/assets/6d21fda0-aa72-4b92-a9a1-2535caff0a00)
 - Copy the alphabet to the `const FORWARD_ALPHABET: &str = "USE alphabet_generator.rs";` in the `src/encoder.rs` and `src/decoder.rs` files.
 - Run `cargo run --bin alphabet_generator` again to generate alphabet for second step of encoding.
-[Screenshot]
+![image](https://github.com/user-attachments/assets/90bd9386-426d-414f-8da2-56401a4878fe)
 - Copy the alphabet to the `const REVERSE_ALPHABET: &str = "USE alphabet_generator.rs one more time";` in the `src/encoder.rs` and `src/decoder.rs` files.
 - Run `cargo run --bin double-rust-shuffle` to encode or decode text.
+
 You can also delete // from the `println!` statements in the `src/encoder.rs` and `src/decoder.rs` files to see how the cipher works.
 
 ## Cipher algorithm description
