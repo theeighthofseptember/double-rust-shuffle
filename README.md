@@ -17,7 +17,7 @@ Double Rust Shuffle is a positional cipher that performs encryption in two stage
 2. Run the executable
 
 ## Usage
-=======
+
 ### First Time Setup
 1. Run the program
 2. Answer 'y' when asked if this is your first time
@@ -36,7 +36,6 @@ Double Rust Shuffle is a positional cipher that performs encryption in two stage
 - Store alphabets in a secure place
 
 ## How it works
->>>>>>> adcdd8a (v2.0.0: Major update - Simplified user experience)
 
 The Double Rust Shuffle cipher implements a two-step positional encryption process:
 
