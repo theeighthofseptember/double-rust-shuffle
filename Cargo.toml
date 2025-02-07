@@ -6,6 +6,3 @@ edition = "2021"
 [dependencies]
 rand = "0.8.5"
 
-[[bin]]
-name = "alphabet_generator"
-path = "src/alphabet_generator.rs"

@@ -1,30 +1,42 @@
 # Double Rust Shuffle
 
-A two-step positional cipher implemented in Rust 🦀
+A two-stage positional cipher implemented in Rust 🦀
 
 ## Overview
-Double Rust Shuffle is a two-step positional cipher that performs encryption in two stages, making it more resistant to frequency analysis attacks.
+Double Rust Shuffle is a positional cipher that performs encryption in two stages, making it more resistant to frequency analysis attacks.
 
 ## Features
-- Two-step encryption process
+- Two-stage encryption process
 - Position-based shuffling
 - Written in pure Rust
-- Custom alphabet support
+- Automatic alphabet generation
+- No code editing required
+
+## Installation
+1. Download the latest release
+2. Run the executable
 
 ## Usage
-- Run `cargo run --bin alphabet_generator` to generate alphabet for first step of encoding.
-![image](https://github.com/user-attachments/assets/6d21fda0-aa72-4b92-a9a1-2535caff0a00)
-- Copy the alphabet to the `const FORWARD_ALPHABET: &str = "USE alphabet_generator.rs";` in the `src/encoder.rs` and `src/decoder.rs` files.
-- Run `cargo run --bin alphabet_generator` again to generate alphabet for second step of encoding.
-![image](https://github.com/user-attachments/assets/90bd9386-426d-414f-8da2-56401a4878fe)
-- Copy the alphabet to the `const REVERSE_ALPHABET: &str = "USE alphabet_generator.rs one more time";` in the `src/encoder.rs` and `src/decoder.rs` files.
-- Run `cargo run --bin project_name` to encode or decode text (replace **project_name** with your project name).
+=======
+### First Time Setup
+1. Run the program
+2. Answer 'y' when asked if this is your first time
+3. The program will generate two random alphabets
+4. Save both alphabets - you'll need them for future encoding/decoding
 
-You can also delete // from the `println!` statements in the `src/encoder.rs` and `src/decoder.rs` files to see how the cipher works.
+### Regular Usage
+1. Run the program
+2. Answer 'n' when asked if this is your first time
+3. Enter your saved alphabets when prompted
+4. Choose to encode or decode text
 
-![image](https://github.com/user-attachments/assets/d6eb7a10-abe4-4fef-8336-f20bf076e611)
-![image](https://github.com/user-attachments/assets/97a9ebad-c75d-4b26-962a-daab449baba8)
-## Cipher algorithm description
+### Important
+- Always save your alphabets! You need the same alphabets to decode that were used to encode
+- Keep your alphabets secret - they serve as your encryption key
+- Store alphabets in a secure place
+
+## How it works
+>>>>>>> adcdd8a (v2.0.0: Major update - Simplified user experience)
 
 The Double Rust Shuffle cipher implements a two-step positional encryption process:
 
@@ -49,7 +61,20 @@ The Double Rust Shuffle cipher implements a two-step positional encryption proce
 - Non-alphabet characters remain unchanged
 - Modular arithmetic ensures the result always maps to valid alphabet characters
 
-### Security Features
+## Version History
+### v2.0.0
+- Complete overhaul of user experience
+- Unified program into single executable
+- Added automatic alphabet generation
+- Removed need for manual code editing
+- Runtime alphabet initialization
+
+### v1.0.0
+- Initial release
+- Required manual alphabet setup
+- Separate encoder and decoder executables
+
+## Security Features
 - Two-step process increases complexity
 - Position-based shifting prevents simple frequency analysis
 - Different alphabets for each step prevent reverse-engineering

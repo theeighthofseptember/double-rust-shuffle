@@ -2,6 +2,7 @@ use std::io::{self, Write};
 
 mod encoder;
 mod decoder;
+mod alphabet_generator;
 
 fn read_input(prompt: &str) -> String {
     print!("{}", prompt);
@@ -12,9 +13,42 @@ fn read_input(prompt: &str) -> String {
     input.trim().to_string()
 }
 
+fn first_time_setup() {
+    println!("\n=== Generating alphabets ===");
+    
+    let forward_alphabet = alphabet_generator::generate_random_alphabet();
+    let reverse_alphabet = alphabet_generator::generate_random_alphabet();
+    
+    println!("\n⚠️ Important: Save these alphabets! You'll need them to decode your messages.");
+    println!("First alphabet (for forward shuffle): {}", forward_alphabet);
+    println!("Second alphabet (for reverse shuffle): {}", reverse_alphabet);
+    
+    // Set alphabets in both encoder and decoder
+    encoder::set_alphabets(forward_alphabet.clone(), reverse_alphabet.clone());
+    decoder::set_alphabets(forward_alphabet, reverse_alphabet);
+    
+    println!("\nPress Enter to continue to the main menu...");
+    let mut buffer = String::new();
+    io::stdin().read_line(&mut buffer).unwrap();
+}
+
 fn main() {
+    let first_time = read_input("Is this your first time running the program? (y/n): ")
+        .to_lowercase()
+        .starts_with('y');
+    
+    if first_time {
+        first_time_setup();
+    } else {
+        println!("Please enter your saved alphabets:");
+        let forward = read_input("Enter first alphabet: ");
+        let reverse = read_input("Enter second alphabet: ");
+        encoder::set_alphabets(forward.clone(), reverse.clone());
+        decoder::set_alphabets(forward, reverse);
+    }
+    
     loop {
-        println!("\n=== Encoder/Decoder ===");
+        println!("\n=== Double Rust Shuffle ===");
         println!("1. Encode text");
         println!("2. Decode text");
         println!("3. Exit");

@@ -16,12 +16,3 @@ pub fn generate_random_alphabet() -> String {
 
     all_chars.into_iter().collect()
 }
-
-const RED: &str = "\x1b[31m";
-const RESET: &str = "\x1b[0m";
-
-fn main() {
-    let alphabet = generate_random_alphabet();
-    println!("Generated alphabet: {}\n{RED}Save this if you want to decode your information later.{RESET}"
-    , alphabet);
-}
